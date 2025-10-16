@@ -23,12 +23,16 @@ set(ament_dependencies
 
 add_executable(gen_rand_str_node src/gen_rand_string.cpp)
 ament_target_dependencies(gen_rand_str_node ${ament_dependencies} )
+add_executable(hash_str src/str_hasher.cpp)
+ament_target_dependencies(hash_str ${ament_dependencies} )
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
 gen_rand_str_node
-DESTINATION lib/${PROJECT_NAME})
+hash_str
+DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()

@@ -10,8 +10,8 @@
 class Rand_str_generator : public rclcpp::Node{
     private:
     std::mt19937_64 m_rand;
-    rclcpp::TimerBase::SharedPtr m_timer;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr m_publisher;
+    rclcpp::TimerBase::SharedPtr m_timer;
 
     void callback(){
         std::array<uint8_t, 128> char_counts{};
