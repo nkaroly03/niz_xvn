@@ -2,6 +2,10 @@
 
 ROS 2 C++ package. [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 
+The package consists of 2 nodes.
+/rand_str_node generates a random ascii string without duplicate characters that is published in a single std_msgs/String topic.
+/str_hasher hashes the collected topic and publishes it in a single std_msgs/uint64 topic.
+
 ## Packages and build
 
 It is assumed that the workspace is `~/ros2_ws/`.

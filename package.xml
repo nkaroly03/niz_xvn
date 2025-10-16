@@ -3,8 +3,8 @@
 <package format="3">
   <name>niz_xvn</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="todo@todo.com">TODO:</maintainer>
+  <description>Generates a random ascii string, discards duplicate characters, then uses a simple hash function to hash the string</description>
+  <maintainer email="nizderkaroly03@gmail.com">TODO:</maintainer>
   <license>GNU General Public License v3.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

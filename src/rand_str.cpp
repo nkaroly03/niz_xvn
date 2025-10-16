@@ -37,7 +37,7 @@ class Rand_str_generator : public rclcpp::Node{
     }
 
     public:
-    Rand_str_generator() : Node{"random_string_generator"}{
+    Rand_str_generator() : Node{"rand_str_node"}{
         using namespace std::chrono_literals;
 
         m_publisher = this->create_publisher<std_msgs::msg::String>("rand_str", 10);

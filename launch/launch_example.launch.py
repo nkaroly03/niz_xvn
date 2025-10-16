@@ -5,8 +5,10 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='niz_xvn',
-            executable='simple_sub_node',
+            executable='rand_str_node',
         ),
-
-        # first comment
+        Node(
+            package='niz_xvn',
+            executable='str_hasher_node',
+        ),
     ])
