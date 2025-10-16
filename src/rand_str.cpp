@@ -40,7 +40,7 @@ class Rand_str_generator : public rclcpp::Node{
     Rand_str_generator() : Node{"rand_str_node"}{
         using namespace std::chrono_literals;
 
-        m_publisher = this->create_publisher<std_msgs::msg::String>("rand_str", 10);
+        m_publisher = this->create_publisher<std_msgs::msg::String>("str", 10);
         m_timer = this->create_wall_timer(500ms, std::bind(&Rand_str_generator::callback, this));
     }
 };

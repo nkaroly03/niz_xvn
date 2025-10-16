@@ -42,3 +42,22 @@ source ~/ros2_ws/install/setup.bash
 ```r
 ros2 launch niz_xvn launch_example1.launch.py
 ```
+
+## Graph
+
+```mermaid
+
+graph LR;
+
+rand_str([ /rand_str_node]):::red --> str
+str[ /str<br/>std_msgs/String]:::light --> str_hasher([ /str_hasher_node]):::red
+str_hasher --> hash[ /hash<br/>std_msgs/Uint64]:::light
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+
+```
+
+![](img/test.png)

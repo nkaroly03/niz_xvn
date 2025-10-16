@@ -31,8 +31,8 @@ class Str_hasher : public rclcpp::Node{
     Str_hasher() : Node{"str_hasher_node"}{
         using namespace std::chrono_literals;
 
-        m_publisher = this->create_publisher<std_msgs::msg::UInt64>("str_hash", 10);
-        m_subscriber = this->create_subscription<std_msgs::msg::String>("rand_str", 10, std::bind(&Str_hasher::str_callback, this, std::placeholders::_1));
+        m_publisher = this->create_publisher<std_msgs::msg::UInt64>("hash", 10);
+        m_subscriber = this->create_subscription<std_msgs::msg::String>("str", 10, std::bind(&Str_hasher::str_callback, this, std::placeholders::_1));
         m_timer = this->create_wall_timer(500ms, std::bind(&Str_hasher::callback, this));
     }
 };
