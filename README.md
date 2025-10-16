@@ -43,6 +43,18 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch niz_xvn launch_example1.launch.py
 ```
 
+### Check calculation
+
+Echo topics /str and /hash
+
+```r
+ros2 topic echo /str
+```
+
+```r
+ros2 topic echo /hash
+```
+
 ## Graph
 
 ```mermaid
