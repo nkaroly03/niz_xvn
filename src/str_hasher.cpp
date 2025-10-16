@@ -24,7 +24,7 @@ class Str_hasher : public rclcpp::Node{
         for (auto c : m_str.data)
             hash.data = 33 * hash.data + c;
 
-        RCLCPP_INFO(this->get_logger(), "Hashed random string: %zu", hash.data);
+        RCLCPP_INFO(this->get_logger(), "Got random string: %s | Hash: %zu\n", m_str.data.c_str(), hash.data);
     }
 
     public:
@@ -32,7 +32,7 @@ class Str_hasher : public rclcpp::Node{
         using namespace std::chrono_literals;
 
         m_publisher = this->create_publisher<std_msgs::msg::UInt64>("hash", 10);
-        m_subscriber = this->create_subscription<std_msgs::msg::String>("rand_str", 10, std::bind(&Str_hasher::str_callback, this));
+        m_subscriber = this->create_subscription<std_msgs::msg::String>("rand_str", 10, std::bind(&Str_hasher::str_callback, this, std::placeholders::_1));
         m_timer = this->create_wall_timer(500ms, std::bind(&Str_hasher::callback, this));
     }
 };

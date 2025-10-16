@@ -32,7 +32,7 @@ class Rand_str_generator : public rclcpp::Node{
             }
         }
 
-        RCLCPP_INFO(this->get_logger(), "random string without duplicate characters: %s\n", s.data.c_str());
+        RCLCPP_INFO(this->get_logger(), "Random string without duplicate characters: %s\n", s.data.c_str());
         m_publisher->publish(s);
     }
 
