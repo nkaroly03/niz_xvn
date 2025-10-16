@@ -24,7 +24,9 @@ class Str_hasher : public rclcpp::Node{
         for (auto c : m_str.data)
             hash.data = 33 * hash.data + c;
 
-        RCLCPP_INFO(this->get_logger(), "Got random string: %s | Hash: %zu\n", m_str.data.c_str(), hash.data);
+        // RCLCPP_INFO(this->get_logger(), "Got random string: %s | Hash: %zu\n", m_str.data.c_str(), hash.data);
+        
+        m_publisher->publish(hash);
     }
 
     public:
