@@ -21,14 +21,14 @@ set(ament_dependencies
   geometry_msgs
 )
 
-# add_executable(simple_sub_node src/print_pose.cpp)
-# ament_target_dependencies(simple_sub_node ${ament_dependencies} )
+add_executable(gen_rand_str_node src/gen_rand_string.cpp)
+ament_target_dependencies(gen_rand_str_node ${ament_dependencies} )
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-# simple_sub_node
+gen_rand_str_node
 DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
