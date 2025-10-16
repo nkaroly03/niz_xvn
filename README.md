@@ -40,7 +40,7 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ```r
-ros2 launch niz_xvn launch_example1.launch.py
+ros2 launch niz_xvn launch_example.launch.py
 ```
 
 ### Check calculation
