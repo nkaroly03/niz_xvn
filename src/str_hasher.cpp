@@ -19,7 +19,7 @@ class Str_hasher : public rclcpp::Node{
 
     void callback(){
         std_msgs::msg::UInt64 hash;
-        hash.data = 5831;
+        hash.data = 5381;
 
         for (auto c : m_str.data)
             hash.data = 33 * hash.data + c;
